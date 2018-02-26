@@ -162,14 +162,14 @@ cat >>/etc/ipsec.conf<<EOF
 # basic configuration
 config setup
     # NAT-TRAVERSAL support, see README.NAT-Traversal
-    nat_traversal=yes
+    # nat_traversal=yes
     # exclude networks used on server side by adding %v4:!a.b.c.0/24
     virtual_private=%v4:10.0.0.0/8,%v4:192.168.0.0/16,%v4:172.16.0.0/12
     # OE is now off by default. Uncomment and change to on, to enable.
-    oe=off
+    # oe=off
     # which IPsec stack to use. auto will try netkey, then klips then mast
     protostack=netkey
-    force_keepalive=yes
+    # force_keepalive=yes
     keep_alive=1800
 
 conn L2TP-PSK-NAT
